@@ -6,7 +6,8 @@ import Box from '../NavbarHoverBox/Box';
 const Navbar = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [dropdown, setDropdown] = useState(false); 
+    const [dropdown, setDropdown] = useState(false);
+    const [showMobileProducts, setShowMobileProducts] = useState(false);
     const location = useLocation();
 
     useEffect(() => {
@@ -40,6 +41,7 @@ const Navbar = () => {
             </div>
 
             <div className='navbar__s2'>
+                <Link to="/" style={getLinkStyle('/')}>Home</Link>
                 <Link to="/solutions" style={getLinkStyle('/', '#solutions')}>Solutions</Link>
 
                 <div
@@ -61,8 +63,6 @@ const Navbar = () => {
                 <Link to="/about" style={getLinkStyle('/about')}>About Us</Link>
 
                 <Link to="/#contact" style={getLinkStyle('/', '#contact')}>Contact Us</Link>
-
-                <Link to="/" style={getLinkStyle('/')}>Home</Link>
             </div>
 
             <div className='navbar__s3'>
@@ -71,14 +71,22 @@ const Navbar = () => {
 
             <div className={`responsive__side__bar ${isMenuOpen ? "open" : ""}`}>
                 <p className='responsive__side__bar__close' onClick={() => setIsMenuOpen(false)}>X</p>
-
+                <Link to="/" onClick={handleLinkClick}>Home</Link>
                 <Link to="/solutions" onClick={handleLinkClick}>Solutions</Link>
-                <Link to="/products/Maintenance-Spare-Parts" onClick={handleLinkClick}>Products</Link>
+                <div className="mobile-products-container">
+                    <div className="mobile-products-header" onClick={() => setShowMobileProducts(!showMobileProducts)}>
+                        <p style={{ cursor: 'pointer', margin: 0 }}>Products</p>
+                        <span className={`mobile-products-toggle ${showMobileProducts ? 'open' : ''}`}>+</span>
+                    </div>
+                    <div className={`mobile-box-wrapper ${showMobileProducts ? 'open' : ''}`}>
+                        <Box onClose={handleLinkClick} />
+                    </div>
+                </div>
                 <Link to="/shops" onClick={handleLinkClick} style={{ display: 'none' }}>Shops</Link>
                 <Link to="/resources" onClick={handleLinkClick} style={{ display: 'none' }}>Resources</Link>
                 <Link to="/about" onClick={handleLinkClick}>About Us</Link>
                 <Link to="/#contact" onClick={handleLinkClick}>Contact Us</Link>
-                <Link to="/" onClick={handleLinkClick}>Home</Link>
+
             </div>
         </div>
     );

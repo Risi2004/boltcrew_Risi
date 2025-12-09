@@ -1,22 +1,44 @@
-.navbar__hoverbox{
+.navbar__hoverbox {
     background-color: #00008B;
     color: white;
     padding: 20px;
     width: 140%;
 }
 
-.navbar__hoverbox__s1{
+.navbar__hoverbox__s1 {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    align-items: flex-start;
+    /* Ensure links only take up content width so underline matches text length */
 }
 
-.navbar__hoverbox__s1 a{
+.navbar__hoverbox__s1 a {
     color: white;
-    padding: 20px;
+    padding: 10px 20px;
+    /* Reduced vertical padding slightly for better underline placement */
     font-size: larger;
+    position: relative;
 }
 
-.navbar__hoverbox__s1 a:hover{
+.navbar__hoverbox__s1 a::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    /* White to be visible on dark blue background */
+    height: 3px;
+    width: 0;
+    left: 20px;
+    /* Match left padding */
+    bottom: 5px;
+    transition: width 0.3s ease;
+}
+
+.navbar__hoverbox__s1 a:hover {
     color: white;
+}
+
+.navbar__hoverbox__s1 a:hover::after {
+    width: calc(100% - 40px);
+    /* Full width relative to container minus padding */
 }

@@ -4,7 +4,7 @@
     gap: 10px;
     align-items: center;
     border-radius: 20px;
-    border: 15px solid #0000B8;
+    border: 5px solid #0000B8;
     box-shadow: 0 8px 4px 0 rgba(0, 0, 0, 0.25) inset;
     margin: 20px;
     position: relative;
@@ -16,6 +16,8 @@
 
 .company__intro__s1 img {
     padding-top: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px ;
     width: 400px;
     height: auto;
 }
@@ -56,7 +58,7 @@
     text-align: center;
     border-radius: 20px;
     padding: 20px;
-    border: 15px solid #0000B8;
+    border: 5px solid #0000B8;
     box-shadow: 0 8px 4px 0 rgba(0, 0, 0, 0.25) inset;
 }
 
@@ -69,7 +71,7 @@
 .brands {
     border-radius: 20px;
     padding: 20px;
-    border: 15px solid #0000B8;
+    border: 5px solid #0000B8;
     box-shadow: 0 8px 4px 0 rgba(0, 0, 0, 0.25) inset;
     margin: 20px;
 }

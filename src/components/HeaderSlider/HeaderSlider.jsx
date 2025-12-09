@@ -3,7 +3,7 @@ import './HeaderSlider.css';
 
 const HeaderSlider = () => {
     const images = [
-        "./Images/header image.png",
+        "./Images/header-slider/slide1.png",
         "./Images/header image.png",
         "./Images/header image.png"
     ];
