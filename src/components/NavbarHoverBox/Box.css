@@ -1,0 +1,22 @@
+.navbar__hoverbox{
+    background-color: #00008B;
+    color: white;
+    padding: 20px;
+    width: 140%;
+}
+
+.navbar__hoverbox__s1{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.navbar__hoverbox__s1 a{
+    color: white;
+    padding: 20px;
+    font-size: larger;
+}
+
+.navbar__hoverbox__s1 a:hover{
+    color: white;
+}

@@ -1,0 +1,16 @@
+.product__grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 900px) {
+    .product__grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}

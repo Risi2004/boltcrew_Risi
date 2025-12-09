@@ -1,0 +1,38 @@
+.brands__slider {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 20px 0; 
+}
+
+.brands__track {
+    display: flex;
+    width: max-content; 
+    gap: 40px; 
+    animation: scroll 60s linear infinite; 
+}
+
+.brands__slide {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; 
+}
+
+.brands__image {
+    height: 80px; 
+    width: auto;
+    object-fit: contain;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); 
+    }
+}
+
+.brands__track:hover {
+    animation-play-state: paused;
+}

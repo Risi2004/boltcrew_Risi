@@ -1,0 +1,137 @@
+.solutionbox-t1 {
+  padding: 50px 40px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.solutionbox-t1 hr {
+  padding-top: 10px;
+  border: none;
+  border-top: 15px solid #00008b;
+}
+
+.box {
+  display: inline-flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.box img {
+  width: 600px;
+  height: 600px;
+  margin-right: 50px;
+  object-fit: cover;
+}
+
+.description {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 60px;
+}
+
+.description h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00008b;
+}
+
+.description p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #000000;
+}
+
+/* Tablet Styles (481px - 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 481px) {
+  .solutionbox-t1 {
+    padding: 40px 30px;
+  }
+
+  .solutionbox-t1 hr {
+    border-top: 12px solid #00008b;
+  }
+
+  .box {
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 25px;
+  }
+
+  .box img {
+    width: 400px;
+    height: 400px;
+    margin-right: 0;
+    flex-shrink: 0;
+  }
+
+  .description {
+    max-width: 100%;
+    padding-left: 0;
+    flex: 1;
+  }
+
+  .description h3 {
+    font-size: 1.75rem;
+    margin-bottom: 15px;
+    justify-content: flex-start;
+  }
+
+  .description p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+}
+
+/* Mobile Styles (≤480px) */
+@media screen and (max-width: 480px) {
+  .solutionbox-t1 {
+    padding: 30px 15px;
+  }
+
+  .solutionbox-t1 hr {
+    border-top: 10px solid #00008b;
+    margin-bottom: 0;
+  }
+
+  .box {
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .box img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    margin-right: 0;
+    order: 1;
+  }
+
+  .description {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    order: 2;
+    width: 100%;
+  }
+
+  .description h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .description p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+}

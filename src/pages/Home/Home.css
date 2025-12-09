@@ -1,0 +1,130 @@
+.company__intro {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    border-radius: 20px;
+    border: 15px solid #0000B8;
+    box-shadow: 0 8px 4px 0 rgba(0, 0, 0, 0.25) inset;
+    margin: 20px;
+    position: relative;
+}
+
+.company__intro__s2 h1 {
+    font-size: 60px;
+}
+
+.company__intro__s1 img {
+    padding-top: 10px;
+    width: 400px;
+    height: auto;
+}
+
+.company__intro__s1 button {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #0000B8;
+    color: white;
+    border: none;
+    margin-bottom: 20px;
+    position: absolute;
+    bottom: 0px;
+    width: 20%;
+    right: 0px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.company__intro__s1 button:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 0.3s;
+}
+
+.company__intro__s2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.solutions {
+    margin: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    border: 15px solid #0000B8;
+    box-shadow: 0 8px 4px 0 rgba(0, 0, 0, 0.25) inset;
+}
+
+.solutions h1 {
+    margin-bottom: 20px;
+    color: #00008B;
+    padding: 20px;
+}
+
+.brands {
+    border-radius: 20px;
+    padding: 20px;
+    border: 15px solid #0000B8;
+    box-shadow: 0 8px 4px 0 rgba(0, 0, 0, 0.25) inset;
+    margin: 20px;
+}
+
+.brands h1 {
+    text-align: center;
+    color: #00008B;
+    margin-bottom: 20px;
+}
+
+#solutions,
+#contact {
+    scroll-margin-top: 150px;
+}
+
+@media screen and (max-width: 1000px) {
+    .company__intro {
+        text-align: center;
+    }
+
+    .company__intro__s1 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .company__intro__s2 {
+        padding: 20px;
+    }
+
+    .company__intro__s2 p {
+        margin-bottom: 20px;
+    }
+
+    .company__intro__s2 h1 {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .company__intro__s1 img {
+        display: none;
+    }
+
+    .company__intro {
+        padding-bottom: 30px;
+    }
+
+    .company__intro__s1 button {
+        bottom: -10px;
+        font-size: 10px;
+    }
+
+    .company__intro__s2 h1 {
+        font-size: 30px;
+    }
+
+    .company__intro__s2 p {
+        margin-bottom: 20px;
+    }
+}

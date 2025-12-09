@@ -1,0 +1,53 @@
+.solution-page {
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.solution-page .title {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.solution-content {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Tablet Styles (481px - 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 481px) {
+  .solution-page {
+    padding: 0 30px;
+  }
+
+  .solution-page .title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+}
+
+/* Mobile Styles (≤480px) */
+@media screen and (max-width: 480px) {
+  .solution-page {
+    padding: 0 15px;
+  }
+
+  .solution-page .title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    padding: 0 10px;
+  }
+
+  .solution-content {
+    width: 100%;
+  }
+}

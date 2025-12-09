@@ -1,0 +1,142 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    z-index: 1000;
+}
+
+.navbar__s1 img {
+    padding-left: 20px;
+    width: auto;
+    height: 150px;
+    display: block;
+}
+
+.navbar__s2 {
+    display: flex;
+    gap: 50px;
+    padding-right: 20px;
+    align-items: center;
+    flex: 1;
+    justify-content: space-evenly;
+    margin-left: 83px;
+}
+
+.navbar__s2 a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: larger;
+}
+
+.navbar__s2 a:hover {
+    color: #00008B;
+}
+
+.navbar__dropdown {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar__dropdown__content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 200px;
+    left: -40px;
+    padding-top: 20px;
+    z-index: 1001;
+}
+
+.navbar__dropdown:hover .navbar__dropdown__content {
+    display: block;
+}
+
+.navbar__dropdown:hover > a {
+    color: #00008B;
+}
+
+.navbar__s3 {
+    padding: 20px;
+    display: none;
+}
+
+.navbar__s3 img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.responsive__side__bar {
+    position: fixed;
+    right: 0;
+    top: 124px;
+    height: calc(100vh - 126px);
+    width: 100%;
+    background-color: #00008B;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 20px;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+.responsive__side__bar::after {
+    content: "";
+    min-height: 20px;
+    display: block;
+}
+
+.responsive__side__bar a,
+.responsive__side__bar__close {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.responsive__side__bar__close {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.responsive__side__bar.open {
+    transform: translateX(0);
+}
+
+.responsive__side__bar::-webkit-scrollbar {
+    display: none;
+}
+
+.responsive__side__bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+@media screen and (max-width: 900px) {
+    .navbar__s2 {
+        display: none;
+    }
+
+    .navbar__s3 {
+        display: block;
+    }
+
+    .responsive__side__bar {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

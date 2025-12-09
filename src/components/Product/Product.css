@@ -1,0 +1,116 @@
+.products {
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+    border-radius: 20px;
+    border: 15px solid #0000B8;
+    box-shadow: 0 8px 4px 0 rgba(0, 0, 0, 0.25) inset;
+    position: relative;
+}
+
+.products h1 {
+    color: #00008B;
+}
+
+.products__s1 img {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    margin: 0 10px;
+    z-index: 10;
+}
+
+.previous__button {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transition: 0.3s;
+}
+
+.previous__button:hover {
+    transform: scale(1.5);
+    transition: 0.3s;
+}
+
+.next__button {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transition: 0.3s;
+}
+
+.next__button:hover {
+    transform: scale(1.5);
+    transition: 0.3s;
+}
+
+.product__cards {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding: 0 40px 10px 40px;
+}
+
+.product__cards::-webkit-scrollbar {
+    display: none;
+}
+
+.product__cards__s1 {
+    position: relative;
+    min-width: calc((100% - 80px) / 3);
+    scroll-snap-align: center;
+}
+
+.product__cards__image {
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* New wrapper for name and button */
+.product__card__details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.product__cards__name {
+    margin: 0;
+    /* ensure font sizes are consistent */
+}
+
+.product__cards__button {
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: transparent;
+    border: none;
+    /* Removed absolute positioning */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product__cards__button img {
+    height: 25px;
+    width: 25px;
+}
+
+.product__cards__button:hover {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 768px) {
+    .product__cards__s1 {
+        min-width: 100%;
+    }
+
+    /* No need for specific positioned adjustments anymore */
+}
