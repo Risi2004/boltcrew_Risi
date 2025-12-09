@@ -6,7 +6,7 @@ import Box from '../NavbarHoverBox/Box';
 const Navbar = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [dropdown, setDropdown] = useState(false); // Added state for dropdown
+    const [dropdown, setDropdown] = useState(false); 
     const location = useLocation();
 
     useEffect(() => {

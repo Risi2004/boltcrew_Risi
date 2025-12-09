@@ -21,7 +21,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/products/*" element={<Product />} />
           <Route path="/solutions" element={<Solution />} />
-          <Route path="*" element={<Navigate to="/" replace />} /> 
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
       <ScrollToTop />
