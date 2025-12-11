@@ -1,26 +1,31 @@
 import React from "react";
 import "./SolutionCards.css";
+import { Link } from 'react-router-dom';
 
 const SolutionCardsData = [
     {
         image: "/Images/solution.png",
         heading: "Design",
-        desc: "Sample text. Click to select the text box. Click again or double click to start editing the text."
+        desc: "Sample text. Click to select the text box. Click again or double click to start editing the text.",
+        targetId: "solution-1"
     },
     {
         image: "/Images/solution.png",
         heading: "Design",
-        desc: "Sample text. Click to select the text box. Click again or double click to start editing the text."
+        desc: "Sample text. Click to select the text box. Click again or double click to start editing the text.",
+        targetId: "solution-2"
     },
     {
         image: "/Images/solution.png",
         heading: "Design",
-        desc: "Sample text. Click to select the text box. Click again or double click to start editing the text."
+        desc: "Sample text. Click to select the text box. Click again or double click to start editing the text.",
+        targetId: "solution-3"
     },
     {
         image: "/Images/solution.png",
         heading: "Design",
-        desc: "Sample text. Click to select the text box. Click again or double click to start editing the text."
+        desc: "Sample text. Click to select the text box. Click again or double click to start editing the text.",
+        targetId: "solution-4"
     }
 ];
 
@@ -68,6 +73,9 @@ const SolutionCard = ({ item }) => {
             <img src={item.image} alt={item.heading} className="solution__cards__image" />
             <h3 className="solution__cards__heading">{item.heading}</h3>
             <p className="solution__cards__desc">{item.desc}</p>
+            <Link to={`/solutions#${item.targetId}`} className="solution__read__more">
+                <button>Read More</button>
+            </Link>
         </div>
     );
 };

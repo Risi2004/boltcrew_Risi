@@ -108,7 +108,7 @@
     padding-top: 20px;
     gap: 20px;
     overflow-y: auto;
-    z-index: 100;
+    z-index: 10000;
 }
 
 .responsive__side__bar::after {
